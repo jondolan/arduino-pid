@@ -87,7 +87,7 @@ void Motor<pwm_pin, dir_pin, enca_pin, encb_pin>::encoder_isr() {
 
 template<int pwm_pin, int dir_pin, int enca_pin, int encb_pin>
 void Motor<pwm_pin, dir_pin, enca_pin, encb_pin>::set_output(int new_speed) {
-    // analogWrite(pwm_pin, new_speed);
+    analogWrite(pwm_pin, new_speed);
 }
 
 template<int pwm_pin, int dir_pin, int enca_pin, int encb_pin>
@@ -109,7 +109,8 @@ void Motor<pwm_pin, dir_pin, enca_pin, encb_pin>::backwards() {
 
 template<int pwm_pin, int dir_pin, int enca_pin, int encb_pin>
 void Motor<pwm_pin, dir_pin, enca_pin, encb_pin>::stop() {
-    // analogWrite(pwm_pin, 0);
+    analogWrite(pwm_pin, 0);
+
 }
 
 template<int pwm_pin, int dir_pin, int enca_pin, int encb_pin>
